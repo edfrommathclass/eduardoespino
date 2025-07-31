@@ -26,7 +26,7 @@ export default function Home() {
 
   const projects = [
     {
-      title: 'EquipX.com',
+      title: 'equipX.com',
       description: 'Enterprise marketplace platform built with React and Next.js, serving high-traffic enterprise clients',
       tech: ['React', 'Next.js', 'TypeScript', 'Vercel'],
       link: 'https://equipx.com'
@@ -179,7 +179,7 @@ export default function Home() {
                 </li>
                 <li className="flex items-start">
                   <span className="text-green-400 mr-3 mt-1">▸</span>
-                  <span>Architected three high-traffic products: EquipX.com, EquipNow mobile app, and 99DPF.com using React, Next.js, and TypeScript</span>
+                  <span>Architected three high-traffic products: equipX.com, EquipNow mobile app, and 99DPF.com using React, React Native, Next.js, and TypeScript</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-green-400 mr-3 mt-1">▸</span>
@@ -233,7 +233,7 @@ export default function Home() {
               mentoring junior and mid-level developers while establishing coding standards and best practices.
             </p>
             <p>
-              I&apos;ve architected and delivered three high-traffic products including EquipX.com, EquipNow mobile app, 
+              I&apos;ve architected and delivered three high-traffic products including equipX.com, EquipNow mobile app, 
               and 99DPF.com using modern technologies like React, Next.js, and TypeScript. My focus on performance 
               optimization has resulted in 40% improvement in LCP and 50% improvement in TTI across our platforms.
             </p>
@@ -254,7 +254,7 @@ export default function Home() {
           <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700 text-center">
             <h3 className="text-2xl font-bold text-purple-400 mb-2">Bachelor of Science in Computer Engineering</h3>
             <h4 className="text-xl text-gray-300 mb-4">California State Polytechnic University, Pomona</h4>
-            <div className="text-gray-400 font-semibold text-lg">2021</div>
+            <div className="text-gray-400 font-semibold text-lg">2017 - 2021</div>
           </div>
         </div>
       </section>
@@ -278,12 +278,20 @@ export default function Home() {
               espino.eddie@gmail.com
             </a>
             <a 
-              href="https://linkedin.com/in/eduardoespino"
+              href="https://linkedin.com/in/eduardo-j-espino"
               className="px-8 py-4 border-2 border-blue-500 rounded-full font-semibold text-lg hover:bg-blue-500/10 transform hover:scale-105 transition-all"
               target="_blank"
               rel="noopener noreferrer"
             >
               LinkedIn
+            </a>
+                        <a 
+              href="https://github.com/eddie-acumedia"
+              className="px-8 py-4 border-2 border-gray-500 rounded-full font-semibold text-lg hover:bg-gray-500/10 transform hover:scale-105 transition-all"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Professional Git
             </a>
             <a 
               href="https://github.com/edfrommathclass"
@@ -291,7 +299,7 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              GitHub
+              Personal Git
             </a>
           </div>
         </div>
