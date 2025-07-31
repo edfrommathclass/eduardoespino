@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
 
 export default function Home() {
   const [currentRole, setCurrentRole] = useState(0);
@@ -26,10 +27,10 @@ export default function Home() {
 
   const projects = [
     {
-      title: 'equipX.com',
+      title: 'EquipX.com',
       description: 'Enterprise marketplace platform built with React and Next.js, serving high-traffic enterprise clients',
       tech: ['React', 'Next.js', 'TypeScript', 'Vercel'],
-      link: 'https://equipx.com'
+      link: '/projects/equipx'
     },
     {
       title: 'EquipNow Mobile App',
@@ -144,12 +145,23 @@ export default function Home() {
                     </span>
                   ))}
                 </div>
-                <a 
-                  href={project.link}
-                  className="inline-flex items-center text-green-400 hover:text-green-300 font-semibold"
-                >
-                  View Project →
-                </a>
+                {project.link.startsWith('/') ? (
+                  <Link 
+                    href={project.link}
+                    className="inline-flex items-center text-green-400 hover:text-green-300 font-semibold"
+                  >
+                    View Project →
+                  </Link>
+                ) : (
+                  <a 
+                    href={project.link}
+                    target={project.link.startsWith('http') ? "_blank" : undefined}
+                    rel={project.link.startsWith('http') ? "noopener noreferrer" : undefined}
+                    className="inline-flex items-center text-green-400 hover:text-green-300 font-semibold"
+                  >
+                    View Project →
+                  </a>
+                )}
               </div>
             ))}
           </div>
