@@ -7,39 +7,41 @@ export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
   
   const roles = [
-    'Frontend Developer',
-    'React Specialist', 
-    'UI/UX Enthusiast',
-    'Problem Solver'
+    'Senior Frontend Engineer',
+    'UI/UX Design Lead', 
+    'React & Next.js Expert',
+    'Team Lead & Mentor'
   ];
 
   const skills = [
-    { name: 'React', level: 95, color: 'bg-blue-500' },
-    { name: 'TypeScript', level: 90, color: 'bg-blue-600' },
-    { name: 'Next.js', level: 88, color: 'bg-black dark:bg-white' },
+    { name: 'React (16-19.1)', level: 98, color: 'bg-blue-500' },
+    { name: 'TypeScript', level: 95, color: 'bg-blue-600' },
+    { name: 'Next.js (12-15.4)', level: 95, color: 'bg-black dark:bg-white' },
     { name: 'Tailwind CSS', level: 92, color: 'bg-cyan-500' },
-    { name: 'JavaScript', level: 95, color: 'bg-yellow-500' },
-    { name: 'Node.js', level: 80, color: 'bg-green-600' },
+    { name: 'JavaScript (ES6+)', level: 98, color: 'bg-yellow-500' },
+    { name: 'UI/UX Design', level: 90, color: 'bg-purple-600' },
+    { name: 'React Native', level: 85, color: 'bg-green-600' },
+    { name: 'Team Leadership', level: 88, color: 'bg-red-500' },
   ];
 
   const projects = [
     {
-      title: 'E-Commerce Platform',
-      description: 'Modern React-based shopping platform with real-time updates',
-      tech: ['React', 'Node.js', 'MongoDB', 'Stripe'],
+      title: 'EquipX.com',
+      description: 'Enterprise marketplace platform built with React and Next.js, serving high-traffic enterprise clients',
+      tech: ['React', 'Next.js', 'TypeScript', 'Vercel'],
+      link: 'https://equipx.com'
+    },
+    {
+      title: 'EquipNow Mobile App',
+      description: 'React Native mobile application for equipment management and marketplace functionality',
+      tech: ['React Native', 'TypeScript', 'Mobile-First Design'],
       link: '#'
     },
     {
-      title: 'Task Management App',
-      description: 'Collaborative workspace with drag-and-drop functionality',
-      tech: ['Next.js', 'TypeScript', 'Prisma', 'PostgreSQL'],
-      link: '#'
-    },
-    {
-      title: 'Portfolio Website',
-      description: 'Responsive portfolio with smooth animations and dark mode',
-      tech: ['Next.js', 'Tailwind CSS', 'Framer Motion'],
-      link: '#'
+      title: '99DPF.com',
+      description: 'Diesel parts & service portal with optimized performance and Core Web Vitals improvements',
+      tech: ['React', 'Next.js', 'Performance Optimization', 'SEO'],
+      link: 'https://99dpf.com'
     }
   ];
 
@@ -66,20 +68,22 @@ export default function Home() {
             Eduardo Espino
           </h1>
           <div className="text-2xl md:text-3xl font-semibold mb-8 h-10">
-            <span className="inline-block transition-all duration-500 transform">
+            <span className="inline-block transition-all duration-300 transform">
               {roles[currentRole]}
             </span>
           </div>
           <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">
-            Crafting exceptional digital experiences with modern web technologies.
-            Passionate about clean code, innovative solutions, and user-centric design.
+            Senior Frontend Engineer & UI/UX Design Lead with 6+ years of experience building 
+            scalable web applications. Leading distributed teams and delivering high-traffic 
+            platforms used by enterprise clients.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-            <button className="px-8 py-4 bg-gradient-to-r from-green-600 to-blue-600 rounded-full font-semibold text-lg hover:from-green-700 hover:to-blue-700 transform hover:scale-105 transition-all shadow-lg hover:shadow-purple-500/25">
+            <button className="px-8 py-4 bg-gradient-to-r from-green-600 to-blue-600 rounded-full font-semibold text-lg hover:from-green-700 hover:to-blue-700 transform hover:scale-105 transition-all shadow-lg hover:shadow-purple-500/25" 
+              onClick={() => window.location.href = '#projects'}>
               View My Work
             </button>
-            <button className="px-8 py-4 border-2 border-green-500 rounded-full font-semibold text-lg hover:bg-green-500/10 transform hover:scale-105 transition-all">
+            <button className="px-8 py-4 border-2 border-green-500 rounded-full font-semibold text-lg hover:bg-green-500/10 transform hover:scale-105 transition-all" onClick={() => window.location.href = '#contact'}>
               Contact Me
             </button>
           </div>
@@ -119,7 +123,7 @@ export default function Home() {
       </section>
 
       {/* Projects Section */}
-      <section className="py-20 px-4">
+      <section className="py-20 px-4" id="projects">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-green-400 to-cyan-400 bg-clip-text text-transparent">
             Featured Projects
@@ -152,6 +156,70 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Experience Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 to-green-500 bg-clip-text text-transparent">
+            Professional Experience
+          </h2>
+          <div className="space-y-12">
+            {/* Acumedia Corporation */}
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700">
+              <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+                <div>
+                  <h3 className="text-2xl font-bold text-green-400 mb-2">Senior Frontend Engineer & UI/UX Design Lead</h3>
+                  <h4 className="text-xl text-gray-300 mb-2">Acumedia Corporation</h4>
+                </div>
+                <div className="text-gray-400 font-semibold">July 2018 – Present</div>
+              </div>
+              <ul className="text-gray-300 space-y-3 leading-relaxed">
+                <li className="flex items-start">
+                  <span className="text-green-400 mr-3 mt-1">▸</span>
+                  <span>Led & scaled a 5-person distributed frontend team, mentoring junior + mid-level devs and driving a 30% reduction in defects</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-green-400 mr-3 mt-1">▸</span>
+                  <span>Architected three high-traffic products: EquipX.com, EquipNow mobile app, and 99DPF.com using React, Next.js, and TypeScript</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-green-400 mr-3 mt-1">▸</span>
+                  <span>Optimized performance (LCP ↓ 40%, TTI ↓ 50%) resulting in 4× improvement in Core Web Vitals</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-green-400 mr-3 mt-1">▸</span>
+                  <span>Implemented CI/CD pipelines reducing release cycle from 3 days to &lt; 2 hours</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* T-Mobile */}
+            <div className="bg-slate-800/30 backdrop-blur-sm rounded-xl p-8 border border-slate-700">
+              <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+                <div>
+                  <h3 className="text-2xl font-bold text-blue-400 mb-2">Retail Store Manager</h3>
+                  <h4 className="text-xl text-gray-300 mb-2">T-Mobile</h4>
+                </div>
+                <div className="text-gray-400 font-semibold">January 2015 - July 2018</div>
+              </div>
+              <ul className="text-gray-300 space-y-3 leading-relaxed">
+                <li className="flex items-start">
+                  <span className="text-blue-400 mr-3 mt-1">▸</span>
+                  <span>Led team to consistently achieve monthly goals through coaching and training</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-blue-400 mr-3 mt-1">▸</span>
+                  <span>Successfully launched new store to profitability within six months</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-blue-400 mr-3 mt-1">▸</span>
+                  <span>Achieved top sales in accessories and mobile internet devices in H2 2017</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* About Section */}
       <section className="py-20 px-4 bg-slate-800/30">
         <div className="max-w-4xl mx-auto text-center">
@@ -160,35 +228,54 @@ export default function Home() {
           </h2>
           <div className="text-lg text-gray-300 leading-relaxed space-y-6">
             <p>
-              I&apos;m a passionate frontend developer with a keen eye for design and a love for creating 
-              seamless user experiences. With expertise in modern React ecosystem and a strong 
-              foundation in web technologies, I bring ideas to life through code.
+              I&apos;m a Senior Frontend Engineer & UI/UX Design Lead at Acumedia Corporation with over 6 years 
+              of experience building and scaling web applications. I lead a distributed team of 5 developers, 
+              mentoring junior and mid-level developers while establishing coding standards and best practices.
             </p>
             <p>
-              When I&apos;m not coding, you&apos;ll find me exploring new technologies, contributing to 
-              open source projects, or sharing knowledge with the developer community. I believe 
-              in continuous learning and staying up-to-date with the latest industry trends.
+              I&apos;ve architected and delivered three high-traffic products including EquipX.com, EquipNow mobile app, 
+              and 99DPF.com using modern technologies like React, Next.js, and TypeScript. My focus on performance 
+              optimization has resulted in 40% improvement in LCP and 50% improvement in TTI across our platforms.
+            </p>
+            <p>
+              I hold a BS in Computer Engineering from Cal Poly Pomona (2021) and am passionate about creating 
+              exceptional user experiences through the intersection of engineering and design.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Contact Section */}
+      {/* Education Section */}
       <section className="py-20 px-4">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
+            Education
+          </h2>
+          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700 text-center">
+            <h3 className="text-2xl font-bold text-purple-400 mb-2">Bachelor of Science in Computer Engineering</h3>
+            <h4 className="text-xl text-gray-300 mb-4">California State Polytechnic University, Pomona</h4>
+            <div className="text-gray-400 font-semibold text-lg">2021</div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section className="py-20 px-4" id="contact">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold mb-8 bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent">
             Let&apos;s Work Together
           </h2>
           <p className="text-xl text-gray-300 mb-12">
-            Ready to bring your next project to life? Let&apos;s connect and create something amazing.
+            Interested in working together? Let&apos;s discuss your next project and how I can help 
+            bring your vision to life with modern web technologies and user-centered design.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
             <a 
-              href="mailto:eduardo@example.com"
+              href="mailto:espino.eddie@gmail.com"
               className="px-8 py-4 bg-gradient-to-r from-green-600 to-blue-600 rounded-full font-semibold text-lg hover:from-green-700 hover:to-blue-700 transform hover:scale-105 transition-all shadow-lg"
             >
-              Send Email
+              espino.eddie@gmail.com
             </a>
             <a 
               href="https://linkedin.com/in/eduardoespino"
